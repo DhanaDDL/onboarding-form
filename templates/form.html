@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Onboarding Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>            Employee Onboarding Form        </h1>
+        <form action="" method="POST">
+            <h2>Section 1: Personal Information</h2>
+            <p>We need some basic details to set up your employee profile and stay in touch.</p>
+            <label>Full Name:</label>
+            <input type="text" name="full_name" required>
+            
+            <label>Preferred Name :</label>
+            <input type="text" name="preferred_name">
+            
+            <label>Father Name:</label>
+            <input type="text" name="father_name" required>
+            
+            <label>Mother Name:</label>
+            <input type="text" name="mother_name" required>
+            
+            <label>Phone Number:</label>
+            <input type="tel" name="phone_number" required>
+            
+            <label>Personal Email Address:</label>
+            <input type="email" name="email" required>
+            
+            <label>Home Address (As per Aadhar Card):</label>
+            <input type="text" name="address" required>
+            
+            <label>Aadhar Card Number (for identity verification):</label>
+            <input type="text" name="aadhar_number" required>
+            
+            <label>Emergency Contact Name:</label>
+            <input type="text" name="emergency_contact_name" required>
+            
+            <label>Emergency Contact Number:</label>
+            <input type="tel" name="emergency_contact_number" required>
+
+            <h2>Section 2: Employment Details</h2>
+            <label>Job Title:</label>
+            <input type="text" name="job_title" required>
+            
+            <label>Department/Team:</label>
+            <input type="text" name="team" required>
+            
+            <label>Start Date:</label>
+            <input type="date" name="start_date" required>
+            
+            <label>Employment Type (Full-Time, Part-Time, or Contract):</label>
+            <select name="employment_type" required>
+                <option value="">Select</option>
+                <option value="Full-Time">Full-Time</option>
+                <option value="Part-Time">Part-Time</option>
+                <option value="Contract">Contract</option>
+            </select>
+            
+            <label>Manager/Supervisor Name:</label>
+            <input type="text" name="manager" required>
+            
+            <label>Work Location (Office, Remote, or Both):</label>
+            <select name="work_location" required>
+                <option value="">Select</option>
+                <option value="Office">Office</option>
+                <option value="Remote">Remote</option>
+                <option value="Both">Both</option>
+            </select>
+
+            <h2>Section 3: Payroll</h2>
+            <label>Bank Account Number (for salary):</label>
+            <input type="text" name="bank_account" required>
+            
+            <label>Bank Account Holder:</label>
+            <input type="text" name="bank_holder" required>
+            
+            <label>PAN Card Number:</label>
+            <input type="text" name="pan_number" required>
+
+            <h2>Section 4: Equipment and Access</h2>
+            <label>Preferred Device Type (Laptop, Desktop, Tablet):</label>
+            <select name="device_type" required>
+                <option value="">Select</option>
+                <option value="Laptop">Laptop</option>
+                <option value="Desktop">Desktop</option>
+                <option value="Tablet">Tablet</option>
+            </select>
+            
+            <label>Any Software Requirements (for your role):</label>
+            <input type="text" name="software_needs">
+            
+            <label>Additional Needs (e.g., headset):</label>
+            <input type="text" name="additional_needs">
+            
+            <label>Company Account Setup:</label>
+            <input type="checkbox" name="account_setup" value="Yes"> I’ll set up my company email and access on my first day.
+
+            <h2>Section 5: Company Policies and Orientation</h2>
+            <label>Employee Handbook Acknowledgment:</label>
+            <input type="checkbox" name="handbook" value="Yes"> I’ve received and read the employee handbook, including policies on workplace conduct, attendance, and benefits.
+            
+            <label>Non-Disclosure Agreement (NDA):</label>
+            <input type="checkbox" name="nda" value="Yes"> I’ve signed the NDA to protect company information.
+            
+            <label>Confidentiality Agreement:</label>
+            <input type="checkbox" name="confidentiality" value="Yes"> I’ve signed the confidentiality agreement to protect sensitive company information.
+            
+            <label>Code of Conduct Agreement:</label>
+            <input type="checkbox" name="code_of_conduct" value="Yes"> I agree to follow the company’s code of conduct, including policies on ethics, anti-harassment, and diversity.
+            
+            <label>Data Protection and Privacy Policy:</label>
+            <input type="checkbox" name="data_protection" value="Yes"> I’ve reviewed the company’s data protection policy and agree to comply with guidelines on handling personal and company data.
+
+            <h2>Section 6: First Day Overview</h2>
+            <label>First Day Schedule:</label>
+            <p>Your manager will email you a schedule, including a team welcome and orientation.</p>
+            <label>Dress Code:</label>
+            <p>Business casual, unless your team says otherwise.</p>
+            
+            <label>Anything Else We Should Know?:</label>
+            <input type="text" name="additional_info">
+
+            <h2>Section 7: Employee Acknowledgment</h2>
+            <p>I’m ready to join the team and contribute to our company’s success!</p>
+            <label>Your Signature:</label>
+            <input type="text" name="signature" required>
+            
+            <label>Today’s Date:</label>
+            <input type="date" name="submission_date" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
