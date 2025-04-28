@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: onboarding-form
-    env: python
-    plan: free
-    branch: main
-    buildCommand: ""
-    startCommand: gunicorn app:app
-
